@@ -1,6 +1,5 @@
 const { actions, fs, util, selectors, log } = require('vortex-api');
 const Promise = require("bluebird");
-const { remote } = require('electron');
 const winapi = require('winapi-bindings');
 const path = require('path');
 const semver = require('semver');
@@ -12,7 +11,7 @@ const STEAM_APP_ID = '1151340';
 const XBOX_ID = 'BethesdaSoftworks.Fallout76-PC';
 const ARCHIVE_EXT = '.ba2';
 const fallout76CustomINI = 'Fallout76Custom.ini';
-const iniPath = path.join(remote.app.getPath('documents'), 'My Games', 'Fallout 76');
+const iniPath = path.join(util.getVortexPath('documents'), 'My Games', 'Fallout 76');
 
 const tools = [
   {
