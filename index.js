@@ -212,7 +212,7 @@ function findExecutable(discoveryPath) {
 }
 
 function main(context) {
-  context.requireVersion('^1.2.0');
+  context.requireVersion('>=1.2.0');
   context.registerGame({
     id: GAME_ID,
     name: 'Fallout 76',
